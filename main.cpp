@@ -9,7 +9,11 @@ int main(){
         std::cout << "Треугольника с такими сторонами не существует " << std::endl;
         return 0;
     }
+    std::string Sides = triangle_sides(a_1, a_2, a_3);
     std::cout << "Треугольник существует, он " << triangle_angles(a_1, a_2, a_3) << std::endl;
+    if(!Sides.empty()){
+        std::cout << "(" << Sides << ")" << std::endl;
+    }
     std::cout << "Периметр равен: " << perimetr(a_1, a_2, a_3) << std::endl;
     std::cout << "Площадь равна: " << area(a_1, a_2, a_3) << std::endl;
     return 0;

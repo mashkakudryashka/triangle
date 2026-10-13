@@ -17,4 +17,8 @@ std::string triangle_angles(double a_1, double a_2, double a_3){
     if (longest_2 < others_sides_2) return "остроугольный";
     return "тупоугольный";
     }
-std::string triangle_sides(double a_1, double a_2, double a_3){return "";}
+std::string triangle_sides(double a_1, double a_2, double a_3){
+    if (a_1 == a_2 && a_2 == a_3) return "равносторонний";
+    if (a_1 == a_2 || a_2 == a_3 || a_3 == a_1) return "равнобедренный";
+    return "";
+}
